@@ -16,4 +16,4 @@ A commit is a save point for git which allows you to leave a short detail messag
 
 * What is a merge conflict?
 
-Merge conflict is when a separate branches make close to the same changes within the same file. 
+This is when a separate branches make close to the same changes within the same file. 
