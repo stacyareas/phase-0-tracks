@@ -1,0 +1,27 @@
+#contact-info{
+	font-size: .8em;
+}
+
+.job{
+	background-color: #e9e5dc;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	padding: 25px; 
+	border-radius: 25px;
+}
+
+.ulist{
+	font-size: .8em;
+}
+
+section:hover{
+	background-color: grey; 
+}
+
+.listitem{
+	background-color: blue;
+}
+
+#list{
+	background-color: red;
+}
