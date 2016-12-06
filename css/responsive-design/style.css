@@ -10,7 +10,7 @@ cite {
 }
 
 #external-links ul {
-  list-style-type: none;
+list-style-type: none;
   padding-left: 0px;
 }
 
@@ -30,3 +30,43 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+body{
+  width: 960px;
+}
+
+#external-links{
+  width:200px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 2px
+  min-width: 20%;
+  max-width: 50%;
+  align-items: center;
+  }
+
+main{
+  display: inline-block;
+  max-width: 20%;
+  vertical-align: top;
+  padding: 2px
+  min-width: 20%;
+  max-width: 50%;
+  
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: .5em;
+   display:block;
+   width:100%;
+  }
+
+}
+
+#center{
+  width: 500px;
+  margin: 0 auto;
+}
+
+
