@@ -8,9 +8,9 @@ employees_count = gets.chomp.to_i
     age_1 = gets.chomp.to_i
   puts "What year were you born?"
     year = gets.chomp.to_i
-  puts "How about garlic?(yes,no,maybe)"
+  puts "How about garlic?(yes,no)"
     answer_1 = gets.chomp
-  puts "Would you like to inroll in health insurance"
+  puts "Would you like to enroll in healthcare(yes,no)"
     answer_2 = gets.chomp
   
   correct_age = 2016 - year.to_i == age_1.to_i
@@ -18,7 +18,7 @@ employees_count = gets.chomp.to_i
   alergy = ""
   
   until alergy == "sunshine" 
-    puts "Name your alergies?"
+    puts "What are your alergies?"
     alergy = gets.chomp
 
   if alergy == "sunshine"
