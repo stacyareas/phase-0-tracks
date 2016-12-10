@@ -1,39 +1,42 @@
-puts "What is your name?"
-first_name = gets.chomp
+puts "how many employees?"
+employees_count = gets.chomp.to_i
 
-puts "How old are you."
-age = gets.chomp
+1..employees_count.each 
+  puts "What is your name?"
+    name = gets.chomp
+  puts "How old are you?"
+    age_1 = gets.chomp.to_i
+  puts "What year were you born?"
+    year = gets.chomp.to_i
+  puts "How about garlic?(yes,no,maybe)"
+    answer_1 = gets.chomp
+  puts "Would you like to inroll in health insurance"
+    answer_2 = gets.chomp
+  
+  correct_age = 2016 - year.to_i == age_1.to_i
+  
+  alergy = ""
+  
+  until alergy == "sunshine" 
+    puts "Name your alergies?"
+    alergy = gets.chomp
 
-puts "What year were you born?"
-year = gets.chomp
-
-puts "Our cafeteria servers galic bread, would you like some?(yes,no)"
-preference = gets.chomp
-
-puts "Would you like to enroll in healthcare?(yes,no)"	
-healthcare = gets.chomp
-
-current_year = 2016
-age_1 = current_year - year
-
-if age == "age_1"
-	puts "Probaly not a vampire."
-elsif preference == "yes" && healthcare == "yes"
-	puts "Probaly not a vampire."
-elsif age != "age_1"
-	puts "Probaly a vampire."
-elsif preference == "maybe" && healthcare == "maybe"
-	puts "Probaly a vampire."
-elsif age != "age_1"
-	puts "Almost certainly a vampire."
-elsif preference == "no" && healthcare == "no"
-	puts "Almost certainly a vampire."
-elsif first_name == "Drake Cula" || "Tu Fang"
-	puts "Definitely a vampire."
-else
-	puts "Results inconclusive."
+  if alergy == "sunshine"
+    puts "Probably a vampire"
+  elsif name == "Drake Cula" || name == "Tu Fang"
+    puts "Definitely a vampire"
+  elsif correct_age && answer_1 == "yes" || correct_age && answer_2 == "yes"
+    puts "probably not a vampire"
+  elsif !correct_age && answer_1 == "no" || !correct_age && answer_2 == "yes"
+    puts "probably a vampire"
+  elsif !correct_age && answer_1 == "no" && answer_2 == "no"
+    puts "Almost cernainly a vampire"
+  else
+    puts "Results inconclusive"
+  end
 end
-	
+puts "Actually never mind! What do those questions have to do with anything. Let's all be friends."
+
 			
 			
 			
