@@ -18,7 +18,7 @@ employees_count = gets.chomp.to_i
   alergy = ""
   
   until alergy == "sunshine" 
-    puts "What are your alergies?"
+    puts "What are your allergies?"
     alergy = gets.chomp
 
   if alergy == "sunshine"
@@ -26,11 +26,11 @@ employees_count = gets.chomp.to_i
   elsif name == "Drake Cula" || name == "Tu Fang"
     puts "Definitely a vampire"
   elsif correct_age && answer_1 == "yes" || correct_age && answer_2 == "yes"
-    puts "probably not a vampire"
+    puts "Probably not a vampire"
   elsif !correct_age && answer_1 == "no" || !correct_age && answer_2 == "yes"
-    puts "probably a vampire"
+    puts "Probably a vampire"
   elsif !correct_age && answer_1 == "no" && answer_2 == "no"
-    puts "Almost cernainly a vampire"
+    puts "Almost certianly a vampire"
   else
     puts "Results inconclusive"
   end
