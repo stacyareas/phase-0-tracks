@@ -35,5 +35,6 @@ loop do
   end 
 end
 
+p names
 
 # Got stucked but wanted to turn in something rather then nothing. 
