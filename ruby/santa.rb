@@ -1,9 +1,9 @@
-class Santas 
+class Santa
 	attr_reader :age, :ethnicity
 	attr_accessor :gender, :celebrate_birthday, :get_mad_at
 
 	def speak
-		puts "Ho, ho, ho! Haaaapy holidays!"
+puts "Ho, ho, ho! Haaaapy holidays!"
 	end
 	def eat_milk_and_cookies(type_of_cookie)
 		puts "That was a good #{type_of_cookie}!"
@@ -13,20 +13,23 @@ class Santas
 		@ethnicity = ethnicity
 	end
 	def santas_info
-		puts "Gender: #{@gender}" 
-		puts "Ethnicity #{@ethnicity}"
-	end
-end
+		puts "Gender: #{@gender}"
+		puts "Ethnicity: #{@ethnicity}"
+	end 
+end 
 
-reindeer_ranking = [
-	"Rudolph", "Dasher", "Dancer", "Prancer", 
-	"Vixen", "Comet", "Cupid", "Donner", "Blitzen"
-]
+reindeer_ranking =  ["Rudolph", "Dasher", "Dancer", 
+	"Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 
-age = 0 
+age = 15
 
+genders = ["agender", "female", "bigender", 
+"male", "gender fluid", "N/A"]
 
-santas = Santas.new("female", "latina")
+ethnicities = ["afrian-american", "nicaraguan", "japanese", "german",
+ "mexican", "irish"]	
+
+santas = Santas.new("female", "nicaraguan")
 santas.santas_info
 santas.speak
 santas.eat_milk_and_cookies("sugar cookie")
@@ -42,12 +45,8 @@ santas.santas_info
 santa = Santas.new("bigender", "nicaraguan")
 santas.santas_info
 santa = Santas.new("female", "german")
-
 p santa.age 
 p santa.ethnicity
 
 santa.gender = "male"
 p "Your gender is now #{santa.gender}."
-
-
-
