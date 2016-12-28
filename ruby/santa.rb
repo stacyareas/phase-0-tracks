@@ -21,13 +21,6 @@ end
 reindeer_ranking =  ["Rudolph", "Dasher", "Dancer", 
 	"Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 
-age = 15
-
-genders = ["agender", "female", "bigender", 
-"male", "gender fluid", "N/A"]
-
-ethnicities = ["afrian-american", "nicaraguan", "japanese", "german",
- "mexican", "irish"]	
 
 santas = Santas.new("female", "nicaraguan")
 santas.santas_info
@@ -52,6 +45,44 @@ p santa.ethnicity
 santa.gender = "male"
 puts "Your gender is now #{santa.gender}"
 
-def random_santa(gender, ethnicity)
 	
+age = 0
+
+
+class Santa
+
+	@@all_genders = ["agender", "female", "bigender", 
+"male", "gender fluid", "N/A"]
+
+	@@all_ethnicities = ["afrian-american", "nicaraguan", "japanese", "german",
+ "mexican", "irish"]
+
+	def initialize(gender, ethnicity) 
+		@gender = genders
+		@ethnicity = ethnicity
+		@age = Random.rand(140)
+	end
+	
+	def initialize
+		@gender = @@all_genders.sample
+		@ethnicity = @@all_ethnicities.sample
+		@age = Random.rand(140)
+	end
+
+	def info 		
+		puts "Gender: #{@gender}, Ethnicity: #{@ethnicity}, Age: #{@age}"
+	end 
+
+	def self.create_a_lot_santas(count)
+		count.times.map{ Santa.new } 
+	end
+	
+end 
+
+santas = Santa.create_a_lot_santas(100)
+santas.each { |x| x.info }
+
+
+
+
 
