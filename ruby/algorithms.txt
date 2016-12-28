@@ -1,0 +1,21 @@
+[Using an elevator]
+
+* Start on the 1 floor
+	- Until you have reached the 40th floor. 
+
+*For ever time you pass 2-39 floor the elevator will “beep” at you. 
+
+*Otherwise you have reached the correct floor and it will “beep” twice to let you know you have made it. 
+
+
+
+[Healthy or Junk Food]
+
+*Monday to Friday are healthy days.
+
+*Until Saturday or Sunday junk isn’t allowed.
+	-If it’s Monday to Friday tell yourself a certain heathy food is good. 
+
+*Otherwise if Saturday or Sunday tell yourself “You’ve been good, treat yourself!!”.
+
+ 
