@@ -1,10 +1,10 @@
-class Santas
+class Santa
 	attr_reader :age, :ethnicity
 	attr_accessor :gender, :celebrate_birthday, :get_mad_at
 
 	def speak
-		puts "Ho, ho, ho! Happppy holidays!"
-	end 
+puts "Ho, ho, ho! Haaaapy holidays!"
+	end
 	def eat_milk_and_cookies(type_of_cookie)
 		puts "That was a good #{type_of_cookie}!"
 	end
@@ -45,13 +45,8 @@ santas.santas_info
 santa = Santas.new("bigender", "nicaraguan")
 santas.santas_info
 santa = Santas.new("female", "german")
-
-p santa.age
+p santa.age 
 p santa.ethnicity
 
 santa.gender = "male"
-puts "Your gender is now #{santa.gender}"
-
-def random_santa(gender, ethnicity)
-	
-
+p "Your gender is now #{santa.gender}."
