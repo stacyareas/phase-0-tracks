@@ -68,3 +68,7 @@ class GuessWordGame
     end
 
 end
+
+
+game = GuessWordGame.new
+game.play
