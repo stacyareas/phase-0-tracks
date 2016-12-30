@@ -35,3 +35,42 @@
   # orginized items and quantity
   # set up output to look nice 
 # output: grocery list that look nice
+
+def create_list(list)
+    list = list.split(' ')
+    shopping_list = {}
+    list.each { |item| shopping_list[item.to_sym]= 1 }
+    shopping_list
+end 
+
+p grocery_items = create_list("kale avocados bananas celery milk")
+
+def add(list, item, quantity)
+    list[item.to_sym] = quantity
+    list  
+end
+
+p add(grocery_items, "lemonade", 2)
+p add(grocery_items, "tomatoes", 3)
+p add(grocery_items, "onions", 1)
+p add(grocery_items, "ice_cream", 4)
+
+def remove(list, item)
+    list.delete(item.to_sym)
+    list
+end 
+
+p remove(grocery_items, "lemonade")
+
+def update_item(list, item, quantity)
+    list[item.to_sym] = quantity
+    list
+end 
+
+p update_item(grocery_items, "ice_cream", 1)
+
+def my_list(list)
+    list.each { |item, quantity| puts "Items: #{item} Qty: #{quantity}" }
+end
+
+my_list(grocery_items)    
