@@ -70,7 +70,7 @@ end
 p update_item(grocery_items, "ice_cream", 1)
 
 def my_list(list)
-    list.each { |item, quantity| puts "Items: #{item} Qty: #{quantity}" }
+    list.each { |item, quantity| puts "Items: #{item} --- Qty: #{quantity}" }
 end
 
 my_list(grocery_items)    
