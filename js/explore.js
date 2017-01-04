@@ -2,14 +2,20 @@
 // Set variable to equal an empty -""- which splits into characters
 // For each character we want to store into new variable and put 
 // the characters in reverse order then join characters together
-// returning our new string
+// set new string to a variable and print the results using  
+// new variable 
+// Add driver code that sets out to be true
 
 
 function reverse(s) {
-    var string = " ";
-    for(var i = s.length - 1; i >= 0; i--)
-    string += s[i];
-    return string;
+    var new_string = " ";
+    for(var i = s.length - 1; i >= 0; i--) {
+        new_string += s[i]
+    }
+    return new_string;
 }
 
-console.log(reverse("Cat in the hat"));
+var result = reverse("cat in the hat");
+
+console.log(result);
+console.log(1 == 1);
