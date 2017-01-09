@@ -2,11 +2,10 @@ class Spaceship
 attr_accessor :name, :location
 attr_reader :speed
 
-@@collected_items = []
-
     def initialize(name, speed)
         @name = name
         @speed = 200000
+        @@collected_items = []
     end
 # Adding a method that have a name and speed the Spaceship
     def name_and_speed
@@ -48,6 +47,10 @@ spaceship.name_and_speed
 
 spaceship = Spaceship.new("Molly", @speed)
 spaceship.enable_shield
+
 spaceship.warp_to("Mars")
 spaceship.warp_to("Earth")
+
 spaceship.tractor_beam("cow")
+spaceship.tractor_beam("moon rock")
+
