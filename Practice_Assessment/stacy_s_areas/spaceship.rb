@@ -34,7 +34,7 @@ attr_reader :speed
             enable_shield
         else
             enable_shield 
-    end 
+        end 
     end
 
     def pickup(items, location)
