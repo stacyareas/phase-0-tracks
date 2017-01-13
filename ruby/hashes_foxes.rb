@@ -27,7 +27,3 @@ if response == "yes"
 else 
 	p clients
 end 
-
-
-
-
