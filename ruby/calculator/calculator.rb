@@ -1,13 +1,40 @@
-class Calculator
-  def add(x,y)
-    x + y
-  end
+def calculate(a, b , operator)
+	if operator == "+"
+		a + b
+	elsif operator == "-"
+		a - b
+	elsif operator == "/"
+		a / b
+	elsif operator == "*"
+		a * b 
+	else
+		exit
+	end
+end 
 
-  def subtract(x,y)
-    x - y
-  end
+p calculate(4, 5, "+") == 9
+p calculate(10, 7, "-") == 3  
 
-  def multiply(x,y)
-    x * y
-  end
-end
+new_hash  = {}
+
+while true
+	puts "What calculation would you like to use?"
+	calculation = gets.chomp
+	if calculation == 'exit'
+		exit
+	end
+		array = calculation.split(' ')
+		new_hash[calculation] = calculate(array[0].to_i, array[2].to_i, array[1])
+		new_hash.each do |answer|
+		answer << new_hash
+		end
+	p new_hash	
+end 
+
+
+calculate << new_hash
+p new_hash
+
+#1. need to create a loop around asking for a user input and displaying the result
+#2. store all calculations into a hash
+#3. display all results
