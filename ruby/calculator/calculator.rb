@@ -31,10 +31,3 @@ while true
 	p new_hash	
 end 
 
-
-calculate << new_hash
-p new_hash
-
-#1. need to create a loop around asking for a user input and displaying the result
-#2. store all calculations into a hash
-#3. display all results
