@@ -12,22 +12,22 @@ def calculate(a, b , operator)
 	end
 end 
 
-p calculate(4, 5, "+") == 9
-p calculate(10, 7, "-") == 3  
+# p calculate(4, 5, "+") == 9
+# p calculate(10, 7, "-") == 3  
 
 new_hash  = {}
-
-while true
+while  true
 	puts "What calculation would you like to use?"
 	calculation = gets.chomp
-	if calculation == 'exit'
-		exit
+	if calculation == 'done'
+		puts "Your calculation:"
+		new_hash.each { |k, v| puts  "#{k} = #{v}" }
+		exit	
 	end
 		array = calculation.split(' ')
 		new_hash[calculation] = calculate(array[0].to_i, array[2].to_i, array[1])
 		new_hash.each do |answer|
 		answer << new_hash
 		end
-	p new_hash	
-end 
-
+		p calculate(array[0].to_i, array[2].to_i, array[1])
+end	
