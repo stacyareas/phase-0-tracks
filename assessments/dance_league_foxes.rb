@@ -1,12 +1,11 @@
 class Dancer
     attr_reader :name 
-    attr_accessor :age, :card, :new_partner
+    attr_accessor :age, :card
 
     def initialize (name, age)
         @name = name 
         @age = age
         @card = []
-        @new_partner = new_partner
     end
 
     def pirouette
@@ -22,10 +21,10 @@ class Dancer
     end 
 
     def begin_next_dance
-        @new_partner = @card.shift
-        "Now dancing with #{@new_partner}."
+        new_partner = @card.shift
+        "Now dancing with #{new_partner}."
     end
-## 
+
     def tutu_color
         colors = ["blue", "white", "green","pink", "orange", "yellow"]
         colors.sample
