@@ -49,7 +49,7 @@ class GuessWordGame
     def read_secret_word(word = nil) # We want to set a parameter for an 
         # argument to equal nil since we don't know what the user will pick 
         puts "Enter your playing word."
-        @word = word || gets.chomp 
+        @word = gets.chomp 
         @result = "_ " * @word.length # store result as "_ " *word.length so we can 
         # store the length of the word and replace it will the underscores so 
         # the user can see how long the word is 
