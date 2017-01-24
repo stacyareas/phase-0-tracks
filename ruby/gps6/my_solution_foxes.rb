@@ -4,26 +4,26 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-# require_relative - Search through current directory
-# require - Search through implied path 
+#
+#
 require_relative 'state_data'
 
 class VirusPredictor
-# pass in any arguments variables with new instance of a class
+
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
-# Calls the two methods in 
+
   def virus_effects
-    predicted_deaths
-    speed_of_spread
+    predicted_deaths(@population_density, @population, @state)
+    speed_of_spread(@population_density, @state)
   end
-# class on methods
+
   private
-# takes 3 arguments it will predict number of deaths for population density
-  def predicted_deaths
+
+  def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -40,8 +40,8 @@ class VirusPredictor
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
   end
-# takes 2 arguments set speed at 0.0 predicts the speed of population density
-  def speed_of_spread #in months
+
+  def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
@@ -81,14 +81,7 @@ california.virus_effects
 
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 alaska.virus_effects
- 
-
-STATE_DATA.each do |key, value| 
-   VirusPredictor.new(key,value[:population_density], value[:population]).virus_effects
- end
-
 
 
 #=======================================================================
 # Reflection Section
-
