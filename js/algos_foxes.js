@@ -11,7 +11,7 @@ var phrases = ["the cat", "in the hats", "likes rats"]
 console.log(longestPhrase);
 
 var personOne = {'age' : 27, 'name' : 'stacy'};
-var personTwo = {'age' : 27, 'name' : 'lamar'};
+var personTwo = {'age' : 29, 'name' : 'stacy'};
 
 function checkIfObjectContains(one, two){
    for (var key in one) {
@@ -33,10 +33,12 @@ function checkIfObjectContains(one, two){
     var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-    for( var i=0; i < 5; i++ )
+    for( var i=0; i < 10; i++ )
         text += possible.charAt(Math.floor(Math.random() * possible.length));
 
     return text;
 }
 
 console.log(makeid());
+
+// I couldn't for the life of me figure out how to finish the last part! >_<
