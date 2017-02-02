@@ -1,0 +1,76 @@
+SQL query:
+
+1. 
+SELECT * FROM movies;
+
+1|Mallrats|1|false
+2|Office Space|3|true
+3|Gladiator|3|true
+4|Trainspotting|5|false
+5|Ever After|2|true
+6|Moulin Rouge|4|false
+7|Old Boy|1|true
+8|Memento|4|false
+9|Mother|6|false
+10|The Shining|3|true
+11|The Cove|4|true
+12|Super Size Me|1|true
+
+2. 
+UPDATE movies SET copies=5 WHERE titles="Mother";
+
+3.
+SELECT * FROM movies, genres WHERE movies.genres_id = genres.id;
+
+1|Mallrats|1|false|2|2|Comedy
+2|Office Space|3|true|2|2|Comedy
+3|Gladiator|3|true|1|1|Drama
+4|Trainspotting|5|false|1|1|Drama
+5|Ever After|2|true|3|3|Romance
+6|Moulin Rouge|4|false|3|3|Romance
+7|Old Boy|1|true|4|4|Thriller
+8|Memento|4|false|4|4|Thriller
+9|Mother|6|false|5|5|Horror
+10|The shining|3|true|5|5|Horror
+11|The Cove|4|true|6|6|Documentary
+12|Super Size Me|1|true|6|6|Documentary
+
+4.
+SELECT * FROM movies, genres WHERE titles="Mallrats" AND genres="Comedy"; 
+
+1|Mallrats|1|false|2|2|Comedy
+
+5.
+DELETE FROM movies WHERE id=12;
+
+Joining:
+
+1.
+SELECT movies.titles, genres.genres FROM movies JOIN genres ON movies.genres_id = genres.id;
+
+Mallrats|Comedy
+Office Space|Comedy
+Gladiator|Drama
+Trainspotting|Drama
+Ever After|Romance
+Moulin Rouge|Romance
+Old Boy|Thriller
+Memento|Thriller
+Mother|Horror
+The shining|Horror
+The Cove|Documentary
+
+2.
+SELECT movies.titles, genres.genres FROM movies INNER JOIN genres ON movies.genres_id=genres.id;
+
+Mallrats|Comedy
+Office Space|Comedy
+Gladiator|Drama
+Trainspotting|Drama
+Ever After|Romance
+Moulin Rouge|Romance
+Old Boy|Thriller
+Memento|Thriller
+Mother|Horror
+The shining|Horror
+The Cove|Documentary
