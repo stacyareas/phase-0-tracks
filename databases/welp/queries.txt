@@ -1,0 +1,167 @@
+2. 
+select * from businesses, reviews, users;
+
+1|Amir;s Towing|1|2|okay service|1|1|1|Bradford|Pitt
+1|Amir;s Towing|1|2|okay service|1|1|2|Mandy|Kaling
+1|Amir;s Towing|1|2|okay service|1|1|3|Angela|Jolie
+1|Amir;s Towing|1|2|okay service|1|1|4|Steven|Wonder
+1|Amir;s Towing|2|4|great service|2|2|1|Bradford|Pitt
+1|Amir;s Towing|2|4|great service|2|2|2|Mandy|Kaling
+1|Amir;s Towing|2|4|great service|2|2|3|Angela|Jolie
+1|Amir;s Towing|2|4|great service|2|2|4|Steven|Wonder
+1|Amir;s Towing|3|4|great food|3|3|1|Bradford|Pitt
+1|Amir;s Towing|3|4|great food|3|3|2|Mandy|Kaling
+1|Amir;s Towing|3|4|great food|3|3|3|Angela|Jolie
+1|Amir;s Towing|3|4|great food|3|3|4|Steven|Wonder
+1|Amir;s Towing|4|0|poor job|4|4|1|Bradford|Pitt
+1|Amir;s Towing|4|0|poor job|4|4|2|Mandy|Kaling
+1|Amir;s Towing|4|0|poor job|4|4|3|Angela|Jolie
+1|Amir;s Towing|4|0|poor job|4|4|4|Steven|Wonder
+2|Lotus yoga|1|2|okay service|1|1|1|Bradford|Pitt
+2|Lotus yoga|1|2|okay service|1|1|2|Mandy|Kaling
+2|Lotus yoga|1|2|okay service|1|1|3|Angela|Jolie
+2|Lotus yoga|1|2|okay service|1|1|4|Steven|Wonder
+2|Lotus yoga|2|4|great service|2|2|1|Bradford|Pitt
+2|Lotus yoga|2|4|great service|2|2|2|Mandy|Kaling
+2|Lotus yoga|2|4|great service|2|2|3|Angela|Jolie
+2|Lotus yoga|2|4|great service|2|2|4|Steven|Wonder
+2|Lotus yoga|3|4|great food|3|3|1|Bradford|Pitt
+2|Lotus yoga|3|4|great food|3|3|2|Mandy|Kaling
+2|Lotus yoga|3|4|great food|3|3|3|Angela|Jolie
+2|Lotus yoga|3|4|great food|3|3|4|Steven|Wonder
+2|Lotus yoga|4|0|poor job|4|4|1|Bradford|Pitt
+2|Lotus yoga|4|0|poor job|4|4|2|Mandy|Kaling
+2|Lotus yoga|4|0|poor job|4|4|3|Angela|Jolie
+2|Lotus yoga|4|0|poor job|4|4|4|Steven|Wonder
+3|Sushi World|1|2|okay service|1|1|1|Bradford|Pitt
+3|Sushi World|1|2|okay service|1|1|2|Mandy|Kaling
+3|Sushi World|1|2|okay service|1|1|3|Angela|Jolie
+3|Sushi World|1|2|okay service|1|1|4|Steven|Wonder
+3|Sushi World|2|4|great service|2|2|1|Bradford|Pitt
+3|Sushi World|2|4|great service|2|2|2|Mandy|Kaling
+3|Sushi World|2|4|great service|2|2|3|Angela|Jolie
+3|Sushi World|2|4|great service|2|2|4|Steven|Wonder
+3|Sushi World|3|4|great food|3|3|1|Bradford|Pitt
+3|Sushi World|3|4|great food|3|3|2|Mandy|Kaling
+3|Sushi World|3|4|great food|3|3|3|Angela|Jolie
+3|Sushi World|3|4|great food|3|3|4|Steven|Wonder
+3|Sushi World|4|0|poor job|4|4|1|Bradford|Pitt
+3|Sushi World|4|0|poor job|4|4|2|Mandy|Kaling
+3|Sushi World|4|0|poor job|4|4|3|Angela|Jolie
+3|Sushi World|4|0|poor job|4|4|4|Steven|Wonder
+4|Plumbing by janet|1|2|okay service|1|1|1|Bradford|Pitt
+4|Plumbing by janet|1|2|okay service|1|1|2|Mandy|Kaling
+4|Plumbing by janet|1|2|okay service|1|1|3|Angela|Jolie
+4|Plumbing by janet|1|2|okay service|1|1|4|Steven|Wonder
+4|Plumbing by janet|2|4|great service|2|2|1|Bradford|Pitt
+4|Plumbing by janet|2|4|great service|2|2|2|Mandy|Kaling
+4|Plumbing by janet|2|4|great service|2|2|3|Angela|Jolie
+4|Plumbing by janet|2|4|great service|2|2|4|Steven|Wonder
+4|Plumbing by janet|3|4|great food|3|3|1|Bradford|Pitt
+4|Plumbing by janet|3|4|great food|3|3|2|Mandy|Kaling
+4|Plumbing by janet|3|4|great food|3|3|3|Angela|Jolie
+4|Plumbing by janet|3|4|great food|3|3|4|Steven|Wonder
+4|Plumbing by janet|4|0|poor job|4|4|1|Bradford|Pitt
+4|Plumbing by janet|4|0|poor job|4|4|2|Mandy|Kaling
+4|Plumbing by janet|4|0|poor job|4|4|3|Angela|Jolie
+4|Plumbing by janet|4|0|poor job|4|4|4|Steven|Wonder
+
+3.
+select * from businesses, reviews  where reviews.business_id = businesses.id;
+
+1|Amir;s Towing|1|2|okay service|1|1
+2|Lotus yoga|2|4|great service|2|2
+3|Sushi World|3|4|great food|3|3
+4|Plumbing by janet|4|0|poor job|4|4
+
+select * from reviews, users,  businesses where reviews.business_id = users.id;
+
+1|2|okay service|1|1|1|Bradford|Pitt|1|Amir;s Towing
+1|2|okay service|1|1|1|Bradford|Pitt|2|Lotus yoga
+1|2|okay service|1|1|1|Bradford|Pitt|3|Sushi World
+1|2|okay service|1|1|1|Bradford|Pitt|4|Plumbing by janet
+2|4|great service|2|2|2|Mandy|Kaling|1|Amir;s Towing
+2|4|great service|2|2|2|Mandy|Kaling|2|Lotus yoga
+2|4|great service|2|2|2|Mandy|Kaling|3|Sushi World
+2|4|great service|2|2|2|Mandy|Kaling|4|Plumbing by janet
+3|4|great food|3|3|3|Angela|Jolie|1|Amir;s Towing
+3|4|great food|3|3|3|Angela|Jolie|2|Lotus yoga
+3|4|great food|3|3|3|Angela|Jolie|3|Sushi World
+3|4|great food|3|3|3|Angela|Jolie|4|Plumbing by janet
+4|0|poor job|4|4|4|Steven|Wonder|1|Amir;s Towing
+4|0|poor job|4|4|4|Steven|Wonder|2|Lotus yoga
+4|0|poor job|4|4|4|Steven|Wonder|3|Sushi World
+4|0|poor job|4|4|4|Steven|Wonder|4|Plumbing by janet
+
+select name, firstname, lastname, stars, comments from businesses, users join reviews on businesses.id;
+
+Amir;s Towing|Bradford|Pitt|2|okay service
+Amir;s Towing|Bradford|Pitt|4|great service
+Amir;s Towing|Bradford|Pitt|4|great food
+Amir;s Towing|Bradford|Pitt|0|poor job
+Amir;s Towing|Mandy|Kaling|2|okay service
+Amir;s Towing|Mandy|Kaling|4|great service
+Amir;s Towing|Mandy|Kaling|4|great food
+Amir;s Towing|Mandy|Kaling|0|poor job
+Amir;s Towing|Angela|Jolie|2|okay service
+Amir;s Towing|Angela|Jolie|4|great service
+Amir;s Towing|Angela|Jolie|4|great food
+Amir;s Towing|Angela|Jolie|0|poor job
+Amir;s Towing|Steven|Wonder|2|okay service
+Amir;s Towing|Steven|Wonder|4|great service
+Amir;s Towing|Steven|Wonder|4|great food
+Amir;s Towing|Steven|Wonder|0|poor job
+Lotus yoga|Bradford|Pitt|2|okay service
+Lotus yoga|Bradford|Pitt|4|great service
+Lotus yoga|Bradford|Pitt|4|great food
+Lotus yoga|Bradford|Pitt|0|poor job
+Lotus yoga|Mandy|Kaling|2|okay service
+Lotus yoga|Mandy|Kaling|4|great service
+Lotus yoga|Mandy|Kaling|4|great food
+Lotus yoga|Mandy|Kaling|0|poor job
+Lotus yoga|Angela|Jolie|2|okay service
+Lotus yoga|Angela|Jolie|4|great service
+Lotus yoga|Angela|Jolie|4|great food
+Lotus yoga|Angela|Jolie|0|poor job
+Lotus yoga|Steven|Wonder|2|okay service
+Lotus yoga|Steven|Wonder|4|great service
+Lotus yoga|Steven|Wonder|4|great food
+Lotus yoga|Steven|Wonder|0|poor job
+Sushi World|Bradford|Pitt|2|okay service
+Sushi World|Bradford|Pitt|4|great service
+Sushi World|Bradford|Pitt|4|great food
+Sushi World|Bradford|Pitt|0|poor job
+Sushi World|Mandy|Kaling|2|okay service
+Sushi World|Mandy|Kaling|4|great service
+Sushi World|Mandy|Kaling|4|great food
+Sushi World|Mandy|Kaling|0|poor job
+Sushi World|Angela|Jolie|2|okay service
+Sushi World|Angela|Jolie|4|great service
+Sushi World|Angela|Jolie|4|great food
+Sushi World|Angela|Jolie|0|poor job
+Sushi World|Steven|Wonder|2|okay service
+Sushi World|Steven|Wonder|4|great service
+Sushi World|Steven|Wonder|4|great food
+Sushi World|Steven|Wonder|0|poor job
+Plumbing by janet|Bradford|Pitt|2|okay service
+Plumbing by janet|Bradford|Pitt|4|great service
+Plumbing by janet|Bradford|Pitt|4|great food
+Plumbing by janet|Bradford|Pitt|0|poor job
+Plumbing by janet|Mandy|Kaling|2|okay service
+Plumbing by janet|Mandy|Kaling|4|great service
+Plumbing by janet|Mandy|Kaling|4|great food
+Plumbing by janet|Mandy|Kaling|0|poor job
+Plumbing by janet|Angela|Jolie|2|okay service
+Plumbing by janet|Angela|Jolie|4|great service
+Plumbing by janet|Angela|Jolie|4|great food
+Plumbing by janet|Angela|Jolie|0|poor job
+Plumbing by janet|Steven|Wonder|2|okay service
+Plumbing by janet|Steven|Wonder|4|great service
+Plumbing by janet|Steven|Wonder|4|great food
+Plumbing by janet|Steven|Wonder|0|poor job
+
+4.
+
+ select * from businesses, reviews where name="Sushi World" and reviews.business_id = businesses.id;
+ 
+3|Sushi World|3|4|great food|3|3
